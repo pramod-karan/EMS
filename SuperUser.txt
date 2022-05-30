@@ -1,0 +1,5 @@
+1. Superuser
+
+username = admin
+email = pramodkaran70@gmail.com
+password = Admin@2022

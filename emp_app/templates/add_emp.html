@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>Add an Employee</title>	
+  </head>
+  <body>
+    <div class="container">
+ 	 <h1>Add an Employee</h1>
+	<hr>
+
+<form action="/add_emp" method = "post">
+    {% csrf_token %}
+    <label for="emp_id">Employee Id</label><br>
+    <input type="Number" placeholder="Enter Employee Id" id="emp_id" name="emp_id" value = "{{emp_id}}"><br>
+
+    <label for="first_name">First Name</label><br>
+    <input type="text" id="first_name" name="first_name" placeholder="Enter First Name" value = "{{first_name}}"><br>
+
+    <label for="last_name">Last Name</label><br>
+    <input type="text" placeholder="Enter Last Name" id="last_name" name="last_name" value = "{{last_name}}"><br>
+
+    <label for="age">Age</label><br>
+    <input type="age" placeholder="Enter sal" id="age" name="age" value = "{{age}}"><br>
+
+
+    <label for="sal">Salary</label><br>
+    <input type="number" placeholder="Enter Salary" id="sal" name="sal" value = "{{sal}}"><br>
+
+    <label for="bonus">Bonus</label><br>
+    <input type="number" placeholder="Enter Bonus Amount" id="bonus" name="bonus" value = "{{bonus}}"><br>
+
+    <label for="dept">Department</label><br>
+    <input type="number" placeholder="Enter Department" id="dept" name="dept" value = "{{dept}}"><br>
+
+    <label for="role">Role</label><br>
+    <input type="number" placeholder="Enter role" id="role" name="role" value = "{{role}}"><br>
+
+    <label for="phone">Phone</label><br>
+    <input type="number" placeholder="Enter Phone Number" id="phone" name="phone" value = "{{phone}}"><br>
+
+    <label for="email">Email</label><br>
+    <input type="email" placeholder="Enter Email" id="email" name="email" value = "{{email}}"><br>
+
+    <hr>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+    
+</form>
+	</div>
+
+   
+  </body>
+</html>
