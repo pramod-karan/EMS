@@ -15,15 +15,27 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from emp_app.views import index, all_emp, add_emp, remove_emp, filter_emp
+from emp_app.views import index, aboutus, all_emp, add_emp,loggedIn, remove_emp, filter_emp, afterlogin, login, logout, signin, register, contact
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
+    path('index', index),
+    path('signin', signin),
+    path('login', login),
+    path('afterlogin', afterlogin),
+    path('loggedIn',loggedIn),
+    path('logout', logout),
+    path('register', register),
+    path('aboutus', aboutus),
+    path('contact', contact),
     path('all_emp', all_emp),
     path('add_emp', add_emp),
     path('remove_emp', remove_emp),
     path('remove_emp/<int:emp_id>', remove_emp),
     path('filter_emp', filter_emp),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-]
+

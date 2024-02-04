@@ -27,9 +27,22 @@ class Employee(models.Model):
 	phone = models.IntegerField()
 	email = models.EmailField(max_length=50)
 	hire_date = models.DateField()
+	username = models.CharField(max_length=15, null=False)
+	password = models.CharField(max_length=15, default = "Welcome*123")
 
 	def __str__(self):
 		return "%s %s %s" %(self.first_name,self.last_name,self.phone)
+
+class Contact(models.Model):
+	sno = models.AutoField(primary_key = True)
+	name = models.CharField(max_length = 50)
+	phone = models.CharField(max_length = 15)
+	email = models.EmailField(max_length=50)
+	content = models.TextField()
+	timeStamp = models.DateTimeField(auto_now_add = True, blank = True)
+	
+	def __str__(self):
+		return 'Message from ' + self.name
 
 
 
